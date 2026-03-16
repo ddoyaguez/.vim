@@ -1,0 +1,11 @@
+# Archivos temporales y swap de Vim
+*.swp
+*.swo
+*~
+
+# Directorios de plugins (se gestionan con tu plugin manager)
+/plugged/
+/bundle/
+/view/
+/undo/
+
