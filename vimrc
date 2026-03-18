@@ -43,6 +43,7 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py --java-completer' }
 Plug 'preservim/nerdtree'
 Plug 'tmsvg/pear-tree'
 Plug 'preservim/tagbar'
+Plug 'kkvh/vim-docker-tools'
 
 call plug#end()
 
@@ -83,3 +84,18 @@ nnoremap <leader>r :source %<CR>
 
 " Mostrar la tagbar
 nnoremap <leader>t :TagbarToggle<CR>
+
+" Hacer mas corto el update time
+set updatetime=500
+
+" Configuración específica de vim-airline y tagbar
+let g:airline_statusline_ontop = 0
+let g:airline_skip_empty_sections = 1
+
+" Docker tools
+autocmd VimEnter * let g:dockertools_docker_cmd = 'podman'
+
+" Forzar actualización de airline
+autocmd VimEnter * call airline#load_theme() | call airline#update_statusline()
+
+
